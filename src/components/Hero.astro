@@ -1,0 +1,12 @@
+---
+interface Props {
+	image: ImageMetadata
+	height: string
+	title: string
+}
+
+const { image, height, title } = Astro.props;
+---
+<div class='bg-image d-flex justify-content-center align-items-center' style={`background-image: url(${image.src}); height: ${height}`}>
+	<h1 class='text-white'>{title}</h1>
+</div>

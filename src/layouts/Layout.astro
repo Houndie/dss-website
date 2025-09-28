@@ -1,0 +1,34 @@
+---
+import 'bootstrap/dist/css/bootstrap.min.css';
+import bootstrap from 'bootstrap/dist/js/bootstrap.bundle.min.js?url';
+
+import Hero from '../components/Hero.astro'
+import Menu from '../components/Menu.astro'
+import Footer from '../components/Footer.astro'
+import PageHeader from '../images/page_header.jpg'
+
+interface Props {
+	title: string
+}
+
+const {title} = Astro.props;
+---	
+
+<html lang="en">
+	<script src={bootstrap}></script>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Dayton Swing Smackdown</title>
+	</head>
+	<body>
+		<Menu />
+		<Hero image={PageHeader} height="13em" title="Dayton Swing Smackdown" />
+		<div class="container">
+			<slot />
+		</div>
+		<Footer />
+	</body>
+</html>

@@ -1,16 +1,39 @@
 ---
+import { Image } from 'astro:assets';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import bootstrap from 'bootstrap/dist/js/bootstrap.bundle.min.js?url';
+
+import Hero from '../components/Hero.astro'
+import Menu from '../components/Menu.astro'
+import Footer from '../components/Footer.astro'
+
+import ViktorJump from '../images/ViktorJump.jpg'
+import TriCity from '../images/tri_city.jpg'
 ---
 
 <html lang="en">
+	<script src={bootstrap}></script>
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Dayton Swing Smackdown</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<Menu />
+		<Hero image={ViktorJump} height="25em" title="Dayton Swing Smackdown" />
+		<div class="container my-5">
+			<div class="row">
+				<div class="col">
+					<Image src={TriCity} class="img-fluid" alt="Team picture of the Tri-City Six, posing at the end of the routine" />
+				</div>
+				<div class="col-7 align-self-center">
+					<p>Dayton Swing Smackdown is a swing dancing event held every year on the last full weekend of February. It features over 9 hours of dancing, 13 hours of instruction, Solo Jazz Competition, Mix n Match Competition, and The Battle of the Swing Cities Team Routine Competition.  Smackdown is now on it’s 15th  year, and getting better with age.  In addition to a dedication to providing a quality weekend, it is one of Smackdown’s core goals to be accessible to everyone, from the experienced dance community, to brand new dancers.  Come and join us in February!</p>
+				</div>
+			</div>
+		</div>
+		<Footer />
 	</body>
 </html>
