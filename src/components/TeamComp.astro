@@ -1,0 +1,21 @@
+---
+import CompItem from './CompItem.astro'
+import type { TeamResult } from './CompItem.astro'
+
+type TeamLinks = {
+	score?: string
+}
+
+export interface Props {
+	teams: TeamResult[]
+	isOldStyle?: boolean
+	links?: TeamLinks
+}
+
+const { teams, isOldStyle, links } = Astro.props
+---
+<CompItem
+	title={"Team Competition " + (isOldStyle ? "(Choreography + Strictly)" : "")}
+	results={teams}
+	links={links && links.score ? [{text: "Scoresheet", url: links.score}] : []}
+/>

@@ -1,0 +1,41 @@
+---
+import CompResults from '../../components/CompResults.astro'
+import Layout from '../../layouts/Layout.astro'
+---
+
+<Layout title="2017 Competition Results">
+	<CompResults
+		team={{
+			teams: [
+				{ name: "SwingColumbus", video: "https://youtu.be/SdctsYtOBSI?list=PLw2dfcFL5AM5IsGCcfS9N13W5OW0lrbpy"},
+				{ name: "Tri City Six", video: "https://youtu.be/CM_CH0GujI8?list=PLw2dfcFL5AM5IsGCcfS9N13W5OW0lrbpy"},
+				{ name: "STL Live Wires", video: "https://youtu.be/mDFIKfjUccw?list=PLw2dfcFL5AM5IsGCcfS9N13W5OW0lrbpy"},
+				{ name: "Naptown Stomp", video: "https://youtu.be/k46WPn8Ovt0?list=PLw2dfcFL5AM5IsGCcfS9N13W5OW0lrbpy"},
+				{ name: "Swing Out Loud", video: "https://youtu.be/yIN0lPzMlNo?list=PLw2dfcFL5AM5IsGCcfS9N13W5OW0lrbpy", isCollegiateCup: true},
+				{ name: "Tenacious Swing", video: "https://youtu.be/H0xgvK0i91o?list=PLw2dfcFL5AM5IsGCcfS9N13W5OW0lrbpy"},
+				{ name: "Rapid Rhythms", video: "https://youtu.be/qUx0jf54b2o?list=PLw2dfcFL5AM5IsGCcfS9N13W5OW0lrbpy"},
+				{ name: "Knoxville Rhythm Steppers", video: "https://youtu.be/aU8o7L7lLL0?list=PLw2dfcFL5AM5IsGCcfS9N13W5OW0lrbpy"}
+			],
+			links: {
+				score: "/images/competitions/2017_team.png"
+			}
+		}}
+		mixAndMatches={[{
+			type: "Jack and Jill",
+			competitors: [
+				"Cindiasaurus Rex & David Deenik",
+				"Jenni Bevell & Kemper Talley",
+				"Sarah Campbell & Viktor Lillard",
+				"Kerry Kapaku & Brent Watson",
+				"Anna Young & XiaoXing Shi",
+			],
+			links: {
+				fPrelimScore: "/images/competitions/2017_jack_and_jill_follower.png",
+				lPrelimScore: "/images/competitions/2017_jack_and_jill_leader.png",
+				prelimVideo: "https://youtu.be/gLFlUMvAIqk?list=PLw2dfcFL5AM5IsGCcfS9N13W5OW0lrbpy",
+				finalsScore: "/images/competitions/2017_jack_and_jill.png",
+				finalsVideo: "https://youtu.be/BZF55m9bol0?list=PLw2dfcFL5AM5IsGCcfS9N13W5OW0lrbpy"
+			}
+		}]}
+	/>
+</Layout>

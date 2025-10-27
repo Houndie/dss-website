@@ -1,0 +1,41 @@
+---
+type Result = {
+	name: string
+	video?: string
+}
+
+export type TeamResult = Result & { isCollegiateCup?: boolean }
+
+const isTeamResult = (result: Result | TeamResult): result is TeamResult => {
+	return (result as TeamResult).isCollegiateCup !== undefined;
+}
+
+export type Link = {
+	text: string
+	url: string
+}
+
+interface Props {
+	title: string
+	results: Result[] | TeamResult[]
+	links?: Link[]
+}
+
+const { title, results, links } = Astro.props
+
+---
+
+<h2>{title}</h2>
+<ol>
+	{results.map(result => (
+	<li>{result.name} {isTeamResult(result) && !!result.isCollegiateCup && (<>(<i>Collegiate Cup Champions</i>)</>)} {!!result.video && (<>(<a href={result.video}>video</a>)</>)}</li>
+	))}
+</ol>
+{(links && links.length) ? (
+	<h3>Links:</h3>
+	<ul>
+		{links.map((link) => (
+			<li><a href={link.url}>{link.text}</a></li>
+		))}
+	</ul>
+) : <div />}

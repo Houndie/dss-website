@@ -1,0 +1,44 @@
+---
+import CompResults from '../../components/CompResults.astro'
+import Layout from '../../layouts/Layout.astro'
+---
+
+<Layout title="2012 Competition Results">
+	<CompResults
+		team={{
+			teams: [
+				{ name: "SwingColumbus", video: "http://youtu.be/09ba3duU9h8" },
+				{ name: "Rhythm Cats", video: "http://youtu.be/yJZ9cpRygP8"},
+				{ name: "Jitterbucks", video: "http://youtu.be/nknd5FOxZVQ", isCollegiateCup: true},
+				{ name: "UD Swing Dance Club", video: "http://youtu.be/a32OZ1c2bc4"},
+				{ name: "Miami Swing Syndicate", video: "http://youtu.be/eDvmshIzUlY"},
+				{ name: "The Razz Ma Tazz", video: "http://youtu.be/dBv2z1GifCg"}
+			],
+		}}
+		mixAndMatches={[{
+			type: "Jack and Jill",
+			competitors: [
+				"Danny Beyrer & Amanda Guieb",
+				"Chris Schoenfelder & Brittany Radke",
+				"T.J. Sweda & Ali Lodico",
+				"Brent Watson & Ada Milby",
+				"Jonathan Fisk & Chelsea Dvorchak",
+				"Cody Ker & Heather Lemire",
+				"Dan Young & Emily Schuhmann"
+			],
+			links: {
+				finalsVideo: "http://youtu.be/OG37nMFjIUA"
+			}
+		}]}
+		solo={{
+			competitors: [
+				"Chris Schoenfelder",
+				"Emily Schuhmann",
+				"Ellen McIntire"
+			],
+			links: {
+				finalsVideo: "http://youtu.be/4i2yH04cN4s"
+			}
+		}}
+	/>
+</Layout>

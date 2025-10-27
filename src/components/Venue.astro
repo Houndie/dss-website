@@ -1,0 +1,31 @@
+---
+import {Image} from 'astro:assets'
+import GoogleMap from './GoogleMap.astro'
+
+interface Props {
+	title: string
+	address: string[]
+	days: string[]
+	google: string
+	image: ImageMetadata
+	imageAlt: string
+}
+
+const { title, address, days, google, image, imageAlt } = Astro.props;
+---
+
+<h2>{title}</h2>
+<div class='container'>
+	<div class='row'>
+		<div class='col'>
+			<ul>{days.map((day) => (<li>{day}</li>))}</ul>
+			<p>{address.map(a => <>{a}</>).reduce((accumulator, currentValue) => (<>{accumulator}<br />{currentValue}</>))}</p>
+			<slot />
+		</div>
+		<div class='col'>
+			<Image src={image} style='width: 200px;' alt={imageAlt}/>
+		</div>
+	</div>
+</div>
+<GoogleMap title={title} link={google} />
+---

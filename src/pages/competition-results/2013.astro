@@ -1,0 +1,46 @@
+---
+import CompResults from '../../components/CompResults.astro'
+import Layout from '../../layouts/Layout.astro'
+---
+
+<Layout title="2013 Competition Results">
+	<CompResults
+		team={{
+			teams: [
+				{ name: "SwingColumbus", video: "http://youtu.be/g1VFLyfAVEA"},
+				{ name: "Rhythm Cats", video: "http://youtu.be/yHfIDWPt5l4"},
+				{ name: "Miami Redhawks", video: "http://youtu.be/UxaRppRLiss", isCollegiateCup: true},
+				{ name: "Tenacious Swing", video: "http://youtu.be/5zBeUNrrGJA"},
+				{ name: "Jitterbucks", video: "http://youtu.be/tjEJDtdZIlI"}
+			],
+		}}
+		mixAndMatches={[{
+			type: "Jack and Jill",
+			competitors: [
+				"Chris Schoenfelder & Ada Milby",
+				"Jay Benze & Emily Schuhmann",
+				"Warren Erath & Anna Young",
+				"Dan Hoy & Gail Clendenin",
+				"Brian Tietz & Ali Lodico",
+				"Dan Young & Brittany Lewton",
+				"Brent Watson & Kat Blum"
+			],
+			links: {
+				fPrelimScore: "/images/competitions/2013_jack_and_jill_follower.jpg",
+				lPrelimScore: "/images/competitions/2013_jack_and_jill_leader.jpg",
+				finalsScore: "/images/competitions/2013_jack_and_jill.jpg",
+				finalsVideo: "http://youtu.be/jptJB735P2g"
+			}
+		}]}
+		solo={{
+			competitors: [
+				"Emily Schuhmann",
+				"Heather Lemire",
+				"Jay Benze"
+			],
+			links: {
+				finalsScore: "/images/competitions/2013_solo.jpg"
+			}
+		}}
+	/>
+</Layout>

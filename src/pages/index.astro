@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import bootstrap from 'bootstrap/dist/js/bootstrap.bundle.min.js?url';
+import bootstrap from 'bootstrap/dist/js/bootstrap.bundle.min.js?url'
 
 import Hero from '../components/Hero.astro'
 import Menu from '../components/Menu.astro'
@@ -13,7 +13,7 @@ import TriCity from '../images/tri_city.jpg'
 ---
 
 <html lang="en">
-	<script src={bootstrap}></script>
+	<script is:inline src={bootstrap}></script>
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -21,7 +21,7 @@ import TriCity from '../images/tri_city.jpg'
 		<meta name="generator" content={Astro.generator} />
 		<title>Dayton Swing Smackdown</title>
 	</head>
-	<body>
+	<body style="background-color: #eeeeee;">
 		<Menu />
 		<Hero image={ViktorJump} height="25em" title="Dayton Swing Smackdown" />
 		<div class="container my-5">

@@ -1,0 +1,10 @@
+---
+interface Props {
+	title: string,
+	link: string,
+}
+
+const { title, link } = Astro.props;
+---
+
+<iframe title={title} class='embed-responsive-item' src={link} width='800' height='450' style={{ border: 0 }} allowfullscreen />

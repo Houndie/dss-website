@@ -9,8 +9,12 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@iconify-json/entypo-social": "^1.2.3",
     "astro": "^5.14.1",
+    "astro-icon": "^1.1.5",
     "bootstrap": "^5.3.8",
-    "sass": "^1.93.2"
+    "sass": "^1.93.2",
+    "typescript": "^5.9.3"
   }
 }

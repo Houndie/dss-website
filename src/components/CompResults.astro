@@ -1,0 +1,19 @@
+---
+import TeamComp from './TeamComp.astro'
+import type {Props as TeamCompProps} from './TeamComp.astro'
+import MixAndMatch from './MixAndMatch.astro'
+import type {Props as MixAndMatchProps} from './MixAndMatch.astro'
+import SoloComp from './SoloComp.astro'
+import type {Props as SoloCompProps} from './SoloComp.astro'
+
+interface Props {
+	team?: TeamCompProps
+	mixAndMatches?: MixAndMatchProps[]
+	solo?: SoloCompProps
+}
+
+const { team, mixAndMatches, solo} = Astro.props
+---
+	{team && (<TeamComp isOldStyle={team.isOldStyle} teams={team.teams} links={team.links}/>)}
+	{mixAndMatches && mixAndMatches.map((mixAndMatch) => (<MixAndMatch type={mixAndMatch.type} competitors={mixAndMatch.competitors} links={mixAndMatch.links} />))}
+	{solo && (<SoloComp competitors={solo.competitors} links={solo.links}/>)}

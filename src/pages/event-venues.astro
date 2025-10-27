@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Venue from '../components/Venue.astro'
+
+import Baum from '../images/venues/baum.jpg'
+import ArborHall from '../images/venues/arbor_hall.jpg'
+import StarCity from '../images/venues/star_city_social_hall.jpg'
+---
+
+<Layout title='Event Venues'>
+	<Venue
+		title="The Baum Opera House"
+		days={[
+			"Friday Night Dance",
+			"Friday Late Night Dance",
+			"Saturday Afternoon Lessons",
+			"Saturday Night Dance"
+		]}
+		address={["15 South 1st Street", "Miamisburg, OH"]}
+		image={Baum}
+		imageAlt="Picture of the Baum Opera House"
+		google="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12289.462909795679!2d-84.286574!3d39.641483!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8840628c7d6aa843%3A0xc8ce9bb439e95bcd!2s15+S+1st+St%2C+Miamisburg%2C+OH+45342!5e0!3m2!1sen!2sus!4v1560288685713!5m2!1sen!2sus"
+	>
+		<p>The Baum Opera House is a registered National Historic Site. Built in 1884, it features two levels, the top level having a large ballroom and stage. The lower level features a smaller floor for a more intimate setting.  Every year it is host to theater production, teas, weddings and wedding receptions, Christmas parties, musical events and many other activities and functions.  This year the Baum Opera House will be host to two of our 3 level tracks, as well as the Friday Night and Saturday Night dances.</p>
+		<p>Parking is available adjacent to the building, as well as across the street.</p>
+	</Venue>
+	<Venue
+		title="Star City Social Hall"
+		days={[
+			"Saturday Afternoon Lessons",
+		]}
+		address={["16 Water St", "Miamisburg, OH"]}
+		image={StarCity}
+		imageAlt="Picture of Star City Social Hall"
+		google="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3072.3608818129837!2d-84.29236282402715!3d39.641592071574635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x884063ff4ea128f5%3A0xda4d03b11b301ea2!2sStar%20City%20Social!5e0!3m2!1sen!2sus!4v1697157779434!5m2!1sen!2sus"
+	>
+		<p>Our former venue of B&B Riverfont Hall is under new management and is now Star City Social Hall!  Located one block from the opera house, this venue is perfect for our second instruction track!  Entrances to the ballroom can be found on both Water Street and Main Street. Both doorways have a sign for the ballroom.</p>
+	</Venue>
+	<Venue
+		title="Arbor Hall"
+		days={[
+			"Saturday Late Night Dance",
+			"Sunday Afternoon"
+		]}
+		address={["2150 Arbor Blvd", "Moraine, OH 45439"]}
+		image={ArborHall}
+		imageAlt="Picture of Arbor Hall"
+		google="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3068.626256612197!2d-84.21334422402302!3d39.725581271559065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x884086ecee03a1fb%3A0xba1d22cc6642e91e!2sArbor%20Hall!5e0!3m2!1sen!2sus!4v1739724805825!5m2!1sen!2sus"
+	>
+		<p>A new venue in 2025!  With it's large ballroom, we're experimenting with this venue on Sunday Afternoon to provide more room for classes</p>
+	</Venue>
+</Layout>

@@ -1,0 +1,43 @@
+---
+import CompItem from './CompItem.astro'
+import type {Link} from './CompItem.astro'
+
+type SoloJazzLinks = {
+	prelimScore?: string
+	prelimVideo?: string
+	finalsScore?: string
+	finalsVideo?: string
+}
+
+export interface Props {
+	competitors: string[]
+	links: SoloJazzLinks
+}
+
+const { competitors, links } = Astro.props
+
+const processLinks = (links: SoloJazzLinks): Link[] => {
+	let linkList = []
+	if(links){
+		if(links.prelimScore){
+			linkList.push({text: "Prelim Scoresheet", url: links.prelimScore})
+		}
+		if(links.prelimVideo){
+			linkList.push({text: "Prelim Video", url: links.prelimVideo})
+		}
+		if(links.finalsScore){
+			linkList.push({text: "Finals Scoresheet", url: links.finalsScore})
+		}
+		if(links.finalsVideo){
+			linkList.push({text: "Finals Video", url: links.finalsVideo})
+		}
+	}
+
+	return linkList
+}
+---
+<CompItem
+	title="Solo Jazz"
+	results={competitors.map(c => {return {name: c}})}
+	links={processLinks(links)}
+/>

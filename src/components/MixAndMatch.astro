@@ -1,0 +1,51 @@
+---
+import CompItem from './CompItem.astro'
+import type {Link} from './CompItem.astro'
+
+type MixAndMatchLinks = {
+	fPrelimScore?: string
+	lPrelimScore?: string
+	prelimVideo?: string
+	finalsScore?: string
+	finalsVideo?: string
+}
+
+export interface Props {
+	type?: "Jack and Jill" | "Open Jack And Jill" | "Amateur Jack And Jill" | "Mix and Match"
+	competitors: string[]
+	links: MixAndMatchLinks
+}
+
+const { type, competitors, links } = Astro.props
+
+const processLinks = (links: MixAndMatchLinks): Link[] => {
+	if(!links){
+		return []
+		}
+
+	let linkList = []
+	if(links.fPrelimScore){
+		linkList.push({text: "Follower Prelim Scoresheet", url: links.fPrelimScore})
+	}
+	if(links.lPrelimScore){
+		linkList.push({text: "Leader Prelim Scoresheet", url: links.lPrelimScore})
+	}
+	if(links.prelimVideo){
+		linkList.push({text: "Prelim Video", url: links.prelimVideo})
+	}
+	if(links.finalsScore){
+		linkList.push({text: "Finals Scoresheet", url: links.finalsScore})
+	}
+	if(links.finalsVideo){
+		linkList.push({text: "Finals Video", url: links.finalsVideo})
+	}
+
+	return linkList
+}
+
+---
+<CompItem
+	title={type ? type : "Mix and Match"}
+	results={competitors.map(c => { return {name: c}})}
+	links={processLinks(links)}
+/>
