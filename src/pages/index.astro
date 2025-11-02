@@ -4,12 +4,15 @@ import { Image } from 'astro:assets';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import bootstrap from 'bootstrap/dist/js/bootstrap.bundle.min.js?url'
 
-import Hero from '../components/Hero.astro'
+import Hero, {Justify} from '../components/Hero.astro'
 import Menu from '../components/Menu.astro'
 import Footer from '../components/Footer.astro'
 
 import ViktorJump from '../images/ViktorJump.jpg'
 import TriCity from '../images/tri_city.jpg'
+import Classes from '../images/Classes.jpg'
+import Competitions from '../images/Competitions.jpg'
+import Music from '../images/Music.jpg'
 ---
 
 <html lang="en">
@@ -23,7 +26,7 @@ import TriCity from '../images/tri_city.jpg'
 	</head>
 	<body style="background-color: #eeeeee;">
 		<Menu />
-		<Hero image={ViktorJump} height="25em" title="Dayton Swing Smackdown" />
+		<Hero image={ViktorJump} height="40em" title="Dayton Swing Smackdown" backgroundPosition="50% 20%"/>
 		<div class="container my-5">
 			<div class="row">
 				<div class="col">
@@ -33,6 +36,16 @@ import TriCity from '../images/tri_city.jpg'
 					<p>Dayton Swing Smackdown is a swing dancing event held every year on the last full weekend of February. It features over 9 hours of dancing, 13 hours of instruction, Solo Jazz Competition, Mix n Match Competition, and The Battle of the Swing Cities Team Routine Competition.  Smackdown is now on it’s 15th  year, and getting better with age.  In addition to a dedication to providing a quality weekend, it is one of Smackdown’s core goals to be accessible to everyone, from the experienced dance community, to brand new dancers.  Come and join us in February!</p>
 				</div>
 			</div>
+		</div>
+		<Hero image={Classes} height="30em" title="Classes" justify={Justify.END} subtitle="Smackdown offers three levels of classes to provide the best instruction for you!" greyInner />
+		<br />
+		<Hero image={Competitions} height="30em" title="Competitions" justify={Justify.START} subtitle="Get your team together and compete in the Battle of the Swing Cities Team Competition!" backgroundPosition="50% 38%" greyInner/>
+		<br />
+		<Hero image={Music} height="30em" title="Music" justify={Justify.END} subtitle="Dance to our live band on Friday, or to our collection of amazing DJs!" greyInner />
+		<br />
+		<div class="text-center">
+			<h2>Have Questions?</h2>
+			<p>Contact us at info@daytonswingsmackdown.com</p>
 		</div>
 		<Footer />
 	</body>

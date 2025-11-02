@@ -1,12 +1,41 @@
 ---
+export enum Justify {
+	START=1,
+	CENTER,
+	END,
+}
+
 interface Props {
 	image: ImageMetadata
 	height: string
 	title: string
+	justify?: Justify
+	subtitle?: string
+	backgroundPosition?: string
+	greyInner?: boolean
 }
 
-const { image, height, title } = Astro.props;
+const { image, height, title, justify, subtitle, backgroundPosition, greyInner } = Astro.props;
+
+const parsedJustify = !!justify ? (() => {
+	switch (justify) {
+		case Justify.START:
+			return 'justify-content-start';
+		case Justify.END:
+			return 'justify-content-end';
+		default:
+			return 'justify-content-center';
+	}
+})() : 'justify-content-center';
+
+const parsedBackgroundPosition = backgroundPosition ?? 'center';
+
+console.log(greyInner);
+
 ---
-<div class='bg-image d-flex justify-content-center align-items-center' style={`background-image: url(${image.src}); height: ${height}`}>
-	<h1 class='text-white'>{title}</h1>
+<div class={`bg-image d-flex ${parsedJustify} align-items-center`} style={`background-position: ${parsedBackgroundPosition}; background-size: cover; background-image: url(${image.src}); height: ${height}`}>
+	<div class='container-overlay text-center p-5 mx-2' style={!!greyInner ? "background-color: rgba(0, 0, 0, 0.5);" : ""}>
+		<h1 class='text-white'>{title}</h1>
+		{subtitle && <p class='text-white'>{subtitle}</p>}
+	</div>
 </div>
