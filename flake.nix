@@ -19,7 +19,10 @@
       in
       {
         devShell = pkgs.mkShell {
-          packages = [ pkgs.deno ];
+          packages = [
+            pkgs.pnpm
+            pkgs.nodejs
+          ];
         };
       }
     );
