@@ -30,8 +30,6 @@ const parsedJustify = !!justify ? (() => {
 
 const parsedBackgroundPosition = backgroundPosition ?? 'center';
 
-console.log(greyInner);
-
 ---
 <div class={`bg-image d-flex ${parsedJustify} align-items-center`} style={`background-position: ${parsedBackgroundPosition}; background-size: cover; background-image: url(${image.src}); height: ${height}`}>
 	<div class='container-overlay text-center p-5 mx-2' style={!!greyInner ? "background-color: rgba(0, 0, 0, 0.5);" : ""}>
