@@ -1,7 +1,52 @@
 ---
+import { Image } from 'astro:assets';
+
 import Layout from '../layouts/Layout.astro'
+
+import AnthonyChen from '../images/instructors/AnthonyChen.jpg'
+import LauraGlaess from '../images/instructors/LauraGlaess.jpg'
+import MichaelFaltesek from '../images/instructors/MichaelFaltesek.png'
+import KerryKapaku from '../images/instructors/KerryKapaku.png'
 ---
 
 <Layout title="Instructors">
-	<p>Instructor information coming soon!</p>
+<h2>Anthony Chen & Laura Glaess</h2>
+<div class="row align-items-center">
+	<div class="col-8">
+		<p>Anthony's first ingress into the performing arts was at age 8 when his parents convinced him to learn and perform Chinese lion dances. Naturally, he then stumbled upon breakdancing during a national speech and debate tournament in middle school, and he had his first foray into swing dancing at age 16 alongside other young interns from a research laboratory. Since then, he has trained in other dance styles including West Coast Swing and various modern street dances, but most of all he enjoys using this background to expand upon his technique and creativity in Lindy Hop. On the social dance floor he is known to be playful, musical, creative, and clear.</p>
+		<p> He holds first place titles from events such as International Lindy Hop Championships, Montreal Swing Riot, Camp Hollywood, Lindy Focus, and Lindyfest and Lone Star Championships. His love of both leading and following, combined with his professional background in education, make the classes that he teaches both clear and intuitive. He is an active scene builder in his community and founded Salt City Swing, a non-profit in Utah where he teaches locally.</p>
+	</div>
+	<div class="col">
+		<Image src={AnthonyChen} class="img-fluid" alt="Anthony Chen; Photo Credit: Alan Wong" />
+	</div>
+</div>
+<div class="row align-items-center">
+	<div class="col">
+		<Image src={LauraGlaess} class="img-fluid" alt="Laura Glaess" />
+	</div>
+	<div class="col-8">
+		<p>Laura Glaess has been an influential voice in Lindy Hop competition, performance, and education for the past 20 years. She has won countless awards and acknowledgments at international competitions, and has taught at festivals in 22 countries spanning 5 continents. She has performed at the Joyce, Jacob’s Pillow, and the Guggenheim, as well as at Lindy Hop and Authentic Jazz festivals worldwide. She is an instructor at Steps on Broadway. Her Youtube channel dedicated to Lindy Hop history, vocabulary, partnering, and body movement is one of the most popular and influential in the scene.</p>
+	</div>
+</div>
+<br />
+<h2>Michael Faltesek & Kerry Kapaku</h2>
+<div class="row align-items-center">
+	<div class="col-8">
+		<p>Dancer. Musician. Entertainer. Michael Faltesek has been teaching and performing for over 21 years. He was a Professor of Dance at the University of Washington and his choreography was called “genius” by the New York Times. Falty has been fortunate enough to learn directly from the originators of swing dancing and is always enthusiastic about spreading his passion for jazz.</p>
+		<p>Falty brings to the dance floor an incredibly diverse social and performance dance talent that includes not only Lindy Hop but also Cakewalk, Black Bottom, Traditional Jazz, Tap, Charleston, Breakaway, Balboa, Big Apple, Blues and many other Authentic American Jazz dances.  So basically all of the swing dancing.</p>
+		<p>In his 21 years of teaching and performing, Falty has traveled all over the globe, from Harlem to Los Angeles, Canada to Korea, and all throughout Europe. Falty is well known for his charismatic personality, approach-ability and passion for the essence of authentic jazz dance and music.  He possesses an enthusiastic ability to convey ideas and movements explicitly, making him a popular instructor wherever he goes. He has taught hundreds of workshops here and abroad, each time leaving a lasting impression on his students.</p>
+		<p>Falty’s main sources of inspiration are the greats of yesteryear. Dancers and performers like Whitey’s Lindy Hoppers, the Nicholas Brothers, Bill “Bojangles” Robinson, John Bubbles, Earl “Snakehips” Tucker, and the Berry Brothers.</p>
+	</div>
+	<div class="col">
+		<Image src={MichaelFaltesek} class="img-fluid" alt="Michael Faltesek" />
+	</div>
+</div>
+<div class="row align-items-center">
+	<div class="col">
+		<Image src={KerryKapaku} class="img-fluid" alt="Kerry Kapaku" />
+	</div>
+	<div class="col-8">
+		<p>Kerry Kapaku is a dancer, teacher, competitor, and performer based in Chicago, IL. While she's been dancing her whole life (including a concert dance performing career and a BFA in Dance from Ohio State University), Kerry was introduced to the wonderful world of lindy hop while attending OSU, and has been hooked ever since. In the classroom, Kerry strives to cultivate an upbeat and encouraging environment for all of her students, while emphasizing creativity, authenticity, and self expression. Kerry holds competitive titles from events such as ILHC, Nevermore Jazz Ball, Lindy Focus, Camp Hollywood, and more. At home, Kerry serves as a board member, instructor and choreographer for Traffic Jam Swing.</p>
+	</div>
+</div>
 </Layout>
