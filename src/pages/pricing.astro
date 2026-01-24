@@ -1,5 +1,9 @@
 ---
+import { Image } from 'astro:assets';
+
 import Layout from '../layouts/Layout.astro'
+
+import TShirt from '../images/2026TShirt.png'
 ---
 <Layout title="Pricing">
 	<h3><a href="https://dayton-swing-smackdown-2026.dancecamps.org/booking.php">Registration is open now!</a></h3>
@@ -27,7 +31,7 @@ import Layout from '../layouts/Layout.astro'
 		<li>Solo Jazz Entry Fee — $5.00</li>
 	</ul>
 	<h2>T-Shirts</h2>
-	<p>T-Shirt design will be available in January 2026</p>
+	<Image src={TShirt} style='width: 200px; height: auto;' alt="2026 TShirt" />
 	<p>All t-shirts will be $17</p>
 	<h3>T-Shirt Sizing Information</h3>
 	<h4>Unisex</h4>
