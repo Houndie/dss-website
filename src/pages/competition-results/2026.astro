@@ -1,0 +1,44 @@
+---
+import CompResults from '../../components/CompResults.astro'
+import Layout from '../../layouts/Layout.astro'
+---
+
+<Layout title="2026 Competition Results">
+	<CompResults
+		team={{
+			teams: [
+				{ name: "Fellowship of the Swing", video: ""},
+				{ name: "Gem City Jump Session", video: ""},
+				{ name: "STL Swing Adult Recreational Dance Team", video: ""},
+				{ name: "Traffic Jam", video: ""},
+				{ name: "Rapid Rhythms", video: ""},
+				{ name: "Second City Swingout", video: ""},
+				{ name: "STL Live Wires", video: ""},
+				{ name: "Hoppin Hoosiers", video: ""},
+				{ name: "Swing Columbus", video: ""},
+				{ name: "Naptown Stomp", video: ""},
+				{ name: "Rush Hour Rhythm", video: ""},
+				{ name: "The Land Lindy Hoppers", video: ""},
+				{ name: "The Swingfishers", video: ""},
+				{ name: "Nashville Swing Fever", video: ""},
+				{ name: "Gem City Swing", video: ""},
+				{ name: "Knox Knocks", video: ""},
+				{ name: "Miami University Swing Syndicate", video: ""},
+			],
+			links: {
+				score: "images/competitions/2026-team-scores.pdf"
+			}
+		}}
+		mixAndMatches={[{
+			type: "Mix and Match",
+			competitors: [
+				"Zoe Shepard & Kemper Talley",
+				"Avbby Camey & John Holmstrom",
+				"Talia Dimitriou & Brent Hrebec",
+				"Cole Crutcher & Sarah Beth McLellan",
+				"Kaitlyn Lange & Mike Yang",
+				"Daniel Mussallam & Sarah Paul"
+			],
+		}]}
+	/>
+</Layout>
