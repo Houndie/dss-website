@@ -1,5 +1,9 @@
 ---
+import { Image } from 'astro:assets';
+
 import Layout from '../layouts/Layout.astro'
+import RegularT from '../images/Regular T Mockup.png'
+import CropT from '../images/Cropped T Mockup.png'
 ---
 <Layout title="Pricing">
 	<h3><a href="https://dayton-swing-smackdown-2027.dancecamps.org">Registration is open now!</a></h3>
@@ -26,6 +30,14 @@ import Layout from '../layouts/Layout.astro'
 	</ul>
 	<h2>T-Shirts</h2>
 	<p>All t-shirts will be $17</p>
+	<div class="row align-items-center">
+		<div class="col-3">
+			<Image src={RegularT} class="img-fluid" alt="Unisex T-Shirt with 2027 Logo" />
+		</div>
+		<div class="col-3">
+			<Image src={CropT} class="img-fluid" alt="Crop Top with 2027 Logo" />
+		</div>
+	</div>
 	<h3>T-Shirt Sizing Information</h3>
 	<h4>Unisex</h4>
 	<p>Measurements</p>
